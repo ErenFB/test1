@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import SearchResultsPage from './pages/SearchResultsPage';
+import ContactPage from './pages/ContactPage';
+import LiveChat from './components/LiveChat';
 
 type PageType = 'home' | 'search' | 'services' | 'how-it-works' | 'companies' | 'contact' | 'login' | 'register';
 
@@ -74,10 +76,7 @@ function App() {
           'Güvenilir nakliyat firmalarımızı inceleyin'
         );
       case 'contact':
-        return renderPlaceholderPage(
-          'İletişim',
-          'Bizimle iletişime geçin, size yardımcı olmaktan mutluluk duyarız'
-        );
+        return <ContactPage />;
       case 'login':
         return renderPlaceholderPage(
           'Oturum Aç',
@@ -100,6 +99,7 @@ function App() {
         {renderContent()}
       </main>
       <Footer />
+      <LiveChat />
     </div>
   );
 }
